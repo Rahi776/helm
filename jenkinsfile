@@ -1,0 +1,12 @@
+pipeline {
+    agent {
+        label 'my-agent'
+    }
+    stages {
+        stage('Install Checkov and Terrascan') {
+            steps {
+                sh "pip install checkov"
+            }
+        }
+    }
+}
